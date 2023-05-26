@@ -75,7 +75,7 @@ class Registration extends React.Component {
             <div className="container">
                 <div className="registration">
                     <form onSubmit={this.handleSubmit}>
-                        <h1 id="header">REGISTRATION</h1>
+                        <h1 id="header">РЕГИСТРАЦИЯ</h1>
                         <div className="area">
                             <div className="input">
                                 <input value={this.state.name} onChange={this.handleNameChange} className="input__area" id="name" type="text" placeholder="Имя" name="name" autoComplete="off" required />
@@ -100,8 +100,8 @@ class Registration extends React.Component {
                             </div>
                         </div>
                         <div className="links">
-                            <a className="forgot" href="https://www.youtube.com/watch?v=tVA7u5jGubY">Forgot Password</a>
-                            <a className="signin" href="https://www.youtube.com/watch?v=7ePWNmLP0Z0">Sign in</a>
+                            <a className="forgot" href="https://www.youtube.com/watch?v=tVA7u5jGubY">Забыли пароль?</a>
+                            <a className="signin" href="https://www.youtube.com/watch?v=7ePWNmLP0Z0">Войти</a>
                         </div>
                         <button type="submit" className="registerbtn">Submit</button>
                     </form>
