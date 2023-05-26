@@ -62,7 +62,7 @@ class Registration extends React.Component {
     handleSubmit() {
         alert(
         "Ваше имя: " + this.state.name + "\n" + 
-        "Ваше фамилия: " + this.state.surname + "\n" + 
+        "Ваша фамилия: " + this.state.surname + "\n" + 
         "Ваше отчество: " + this.state.fatherName + "\n" + 
         "Ваш номер: " + this.state.number + "\n" + 
         "Ваша почта: " + this.state.email + "\n" + 
