@@ -6,13 +6,45 @@ class Registration extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            name: "",
+            surname: "",
+            fatherName: "",
+            number: "",
             email: "",
             password: "",
         }
         
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleNameChange = this.handleNameChange.bind(this) 
+        this.handleSurnameChange = this.handleSurnameChange.bind(this) 
+        this.handleFatherNameChange = this.handleFatherNameChange.bind(this) 
+        this.handleNumberChange = this.handleNumberChange.bind(this) 
         this.handleLoginChange = this.handleLoginChange.bind(this) 
         this.handlePasswordChange = this.handlePasswordChange.bind(this) 
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    handleNameChange(event) {
+        this.setState({
+            name: event.target.value
+        });
+    }
+
+    handleSurnameChange(event) {
+        this.setState({
+            surname: event.target.value
+        });
+    }
+
+    handleFatherNameChange(event) {
+        this.setState({
+            fatherName: event.target.value
+        });
+    }
+
+    handleNumberChange(event) {
+        this.setState({
+            number: event.target.value
+        });
     }
 
     handleLoginChange(event) {
@@ -28,7 +60,14 @@ class Registration extends React.Component {
     }
 
     handleSubmit() {
-        alert("Ваша почта: " + this.state.email + "\n" + "Ваш пароль: " + this.state.password)
+        alert(
+        "Ваше имя: " + this.state.name + "\n" + 
+        "Ваше фамилия: " + this.state.surname + "\n" + 
+        "Ваше отчество: " + this.state.fatherName + "\n" + 
+        "Ваш номер: " + this.state.number + "\n" + 
+        "Ваша почта: " + this.state.email + "\n" + 
+        "Ваш пароль: " + this.state.password
+        )
     }
 
     render() {
@@ -39,13 +78,25 @@ class Registration extends React.Component {
                         <h1 id="header">REGISTRATION</h1>
                         <div className="area">
                             <div className="input">
-                                <input value={this.state.email} onChange={this.handleLoginChange} className="input__area" id="email" type="text" placeholder="email" name="email" autoComplete="off" required />
+                                <input value={this.state.name} onChange={this.handleNameChange} className="input__area" id="name" type="text" placeholder="Имя" name="name" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input value={this.state.password} onChange={this.handlePasswordChange} className="input__area" id="password" type="password" placeholder="password" name="psw" required />
+                                <input value={this.state.surname} onChange={this.handleSurnameChange} className="input__area" id="surname" type="text" placeholder="Фамилия" name="surname" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input className="input__area" id="reapit__password" type="password" placeholder="repeat password" name="psw-repeat" required />
+                                <input value={this.state.fatherName} onChange={this.handleFatherNameChange} className="input__area" id="fatherName" type="text" placeholder="Отчество" name="fatherName" autoComplete="off" required />
+                            </div>
+                            <div className="input">
+                                <input value={this.state.number} onChange={this.handleNumberChange} className="input__area" id="number" type="number" placeholder="Номер телефона" name="number" autoComplete="off" required />
+                            </div>
+                            <div className="input">
+                                <input value={this.state.email} onChange={this.handleLoginChange} className="input__area" id="email" type="text" placeholder="Электронный адрес" name="email" autoComplete="off" required />
+                            </div>
+                            <div className="input">
+                                <input value={this.state.password} onChange={this.handlePasswordChange} className="input__area" id="password" type="password" placeholder="Пароль" name="psw" required />
+                            </div>
+                            <div className="input">
+                                <input className="input__area" id="reapit__password" type="password" placeholder="Повторите пароль" name="psw-repeat" required />
                             </div>
                         </div>
                         <div className="links">
