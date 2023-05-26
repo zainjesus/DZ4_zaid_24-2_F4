@@ -18,7 +18,7 @@ class Registration extends React.Component {
         this.handleSurnameChange = this.handleSurnameChange.bind(this) 
         this.handleFatherNameChange = this.handleFatherNameChange.bind(this) 
         this.handleNumberChange = this.handleNumberChange.bind(this) 
-        this.handleLoginChange = this.handleLoginChange.bind(this) 
+        this.handleEmailChange = this.handleEmailChange.bind(this) 
         this.handlePasswordChange = this.handlePasswordChange.bind(this) 
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -47,7 +47,7 @@ class Registration extends React.Component {
         });
     }
 
-    handleLoginChange(event) {
+    handleEmailChange(event) {
         this.setState({
             email: event.target.value
         });
@@ -90,7 +90,7 @@ class Registration extends React.Component {
                                 <input value={this.state.number} onChange={this.handleNumberChange} className="input__area" id="number" type="number" placeholder="Номер телефона" name="number" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input value={this.state.email} onChange={this.handleLoginChange} className="input__area" id="email" type="text" placeholder="Электронный адрес" name="email" autoComplete="off" required />
+                                <input value={this.state.email} onChange={this.handleEmailChange} className="input__area" id="email" type="text" placeholder="Электронный адрес" name="email" autoComplete="off" required />
                             </div>
                             <div className="input">
                                 <input value={this.state.password} onChange={this.handlePasswordChange} className="input__area" id="password" type="password" placeholder="Пароль" name="psw" required />
