@@ -103,7 +103,7 @@ class Registration extends React.Component {
                             <a className="forgot" href="https://www.youtube.com/watch?v=tVA7u5jGubY">Забыли пароль?</a>
                             <a className="signin" href="https://www.youtube.com/watch?v=7ePWNmLP0Z0">Войти</a>
                         </div>
-                        <button type="submit" className="registerbtn">Submit</button>
+                        <button type="submit" className="registerbtn">Подтвердить</button>
                     </form>
                 </div>
             </div>
