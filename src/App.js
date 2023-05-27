@@ -11,53 +11,18 @@ class Registration extends React.Component {
             fatherName: "",
             number: "",
             email: "",
-            password: "",
+            password: ""
         }
         
-        this.handleNameChange = this.handleNameChange.bind(this) 
-        this.handleSurnameChange = this.handleSurnameChange.bind(this) 
-        this.handleFatherNameChange = this.handleFatherNameChange.bind(this) 
-        this.handleNumberChange = this.handleNumberChange.bind(this) 
-        this.handleEmailChange = this.handleEmailChange.bind(this) 
-        this.handlePasswordChange = this.handlePasswordChange.bind(this) 
+        this.handleChange = this.handleChange.bind(this) 
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    handleNameChange(event) {
+    handleChange(event) {
         this.setState({
-            name: event.target.value
+          [event.target.name]: event.target.value
         });
-    }
-
-    handleSurnameChange(event) {
-        this.setState({
-            surname: event.target.value
-        });
-    }
-
-    handleFatherNameChange(event) {
-        this.setState({
-            fatherName: event.target.value
-        });
-    }
-
-    handleNumberChange(event) {
-        this.setState({
-            number: event.target.value
-        });
-    }
-
-    handleEmailChange(event) {
-        this.setState({
-            email: event.target.value
-        });
-    }
-      
-    handlePasswordChange(event) {
-        this.setState({
-            password: event.target.value
-        });
-    }
+      }
 
     handleSubmit() {
         alert(
@@ -78,22 +43,22 @@ class Registration extends React.Component {
                         <h1 id="header">РЕГИСТРАЦИЯ</h1>
                         <div className="area">
                             <div className="input">
-                                <input value={this.state.name} onChange={this.handleNameChange} className="input__area" id="name" type="text" placeholder="Имя" name="name" autoComplete="off" required />
+                                <input value={this.state.name} onChange={this.handleChange} className="input__area" id="name" type="text" placeholder="Имя" name="name" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input value={this.state.surname} onChange={this.handleSurnameChange} className="input__area" id="surname" type="text" placeholder="Фамилия" name="surname" autoComplete="off" required />
+                                <input value={this.state.surname} onChange={this.handleChange} className="input__area" id="surname" type="text" placeholder="Фамилия" name="surname" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input value={this.state.fatherName} onChange={this.handleFatherNameChange} className="input__area" id="fatherName" type="text" placeholder="Отчество" name="fatherName" autoComplete="off" required />
+                                <input value={this.state.fatherName} onChange={this.handleChange} className="input__area" id="fatherName" type="text" placeholder="Отчество" name="fatherName" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input value={this.state.number} onChange={this.handleNumberChange} className="input__area" id="number" type="number" placeholder="Номер телефона" name="number" autoComplete="off" required />
+                                <input value={this.state.number} onChange={this.handleChange} className="input__area" id="number" type="number" placeholder="Номер телефона" name="number" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input value={this.state.email} onChange={this.handleEmailChange} className="input__area" id="email" type="text" placeholder="Электронный адрес" name="email" autoComplete="off" required />
+                                <input value={this.state.email} onChange={this.handleChange} className="input__area" id="email" type="text" placeholder="Электронный адрес" name="email" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input value={this.state.password} onChange={this.handlePasswordChange} className="input__area" id="password" type="password" placeholder="Пароль" name="psw" required />
+                                <input value={this.state.password} onChange={this.handleChange} className="input__area" id="password" type="password" placeholder="Пароль" name="password" required />
                             </div>
                             <div className="input">
                                 <input className="input__area" id="reapit__password" type="password" placeholder="Повторите пароль" name="psw-repeat" required />
@@ -101,7 +66,7 @@ class Registration extends React.Component {
                         </div>
                         <div className="links">
                             <a className="forgot" href="https://www.youtube.com/watch?v=tVA7u5jGubY">Забыли пароль?</a>
-                            <a className="signin" href="https://www.youtube.com/watch?v=7ePWNmLP0Z0">Войти</a>
+                            <a className="signin" href="https://www.youtube.com/watch? v=7ePWNmLP0Z0">Войти</a>
                         </div>
                         <button type="submit" className="registerbtn">Подтвердить</button>
                     </form>
@@ -112,4 +77,3 @@ class Registration extends React.Component {
 }
 
 export default Registration
-
