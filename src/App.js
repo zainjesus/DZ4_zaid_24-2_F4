@@ -55,7 +55,7 @@ class Registration extends React.Component {
                                 <input value={this.state.number} onChange={this.handleChange} className="input__area" id="number" type="number" placeholder="Номер телефона" name="number" autoComplete="off" required />
                             </div>
                             <div className="input">
-                                <input value={this.state.email} onChange={this.handleChange} className="input__area" id="email" type="text" placeholder="Электронный адрес" name="email" autoComplete="off" required />
+                                <input value={this.state.email} onChange={this.handleChange} className="input__area" id="email" type="email" placeholder="Электронный адрес" name="email" autoComplete="off" required />
                             </div>
                             <div className="input">
                                 <input value={this.state.password} onChange={this.handleChange} className="input__area" id="password" type="password" placeholder="Пароль" name="password" required />
